@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 import BaseTemplate, { IBaseTemplate } from "./BaseTemplate";
+import { mockBaseTemplateProps } from "./baseTemplate.mocks";
 
 export default {
   title: "templates/BaseTemplate",
@@ -16,5 +17,5 @@ const Template: ComponentStory<typeof BaseTemplate> = (args) => (
 export const Base = Template.bind({});
 
 Base.args = {
-  sampleTextProp: "Hello World",
+  ...mockBaseTemplateProps.base,
 } as IBaseTemplate;
